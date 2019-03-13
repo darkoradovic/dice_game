@@ -9,12 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <div class="wrapper clearfix">
+            <button id="myBtn"><i class="fas fa-question"></i></button>
         <div class="player-0-panel active">
             <div class="player-name" id="name-0">Player 1</div>
             <div class="player-score" id="score-0">43</div>
@@ -36,13 +38,34 @@
         <button class="btn-new"><i class="fas fa-plus-circle"></i>New game</button>
         <button class="btn-roll"><i class="fas fa-sync-alt"></i>Roll dice</button>
         <button class="btn-hold"><i class="far fa-arrow-alt-circle-down"></i>Hold</button>
-
+        
         <!-- <input type="text" placeholder="Set score" class="final-score"> -->
 
         <img src="img/dice-5.png" alt="Dice" class="dice">
     </div>
 
+    
+
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>GAME RULES:</p>
+            <ul>
+                <li>The game has 2 players, playing in rounds.</li>
+                <li>In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND
+                    score.</li>
+                <li>BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's
+                    turn.</li>
+                <li>The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score.
+                    After that, it's the next player's turn.</li>
+                <li>The first player to reach 100 points on GLOBAL score wins the game.</li>
+            </ul>
+        </div>
+
+    </div>
+
     <script src="app.js"></script>
 </body>
 
-</html>
+</htmli
